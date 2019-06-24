@@ -1,0 +1,35 @@
+#set("body") {
+    <div class="col-md-10 col-md-offset-1">
+        <table class="table table-bordered">
+        #for(bundleId in data) {
+            <tr>
+            <td width="100px"><a href="/bundle_ids/#(bundleId.id)">#(bundleId.id)</a></td>
+            <td>#(bundleId.attributes.name)</td>
+            <td>#(bundleId.attributes.identifier)</td>
+            <td>#(bundleId.attributes.platform)</td>
+            <td>#(bundleId.attributes.seedId)</td>
+            <td>#(bundleId.type)</td>
+            <td><a class="delete_btn" href="#" onclick="deleteBundleId('#(bundleId.id)')">删除</td>
+            </tr>
+        }
+        </table>
+    </div>
+}
+<script lanuage="text/javascript">
+    function deleteBundleId(bundleId) {
+        $.ajax({
+            url: "/bundle_ids/" + bundleId,
+            type: "delete",
+            dataType: "json", 
+            complete: function(jqXHR, data) {  
+                if (jqXHR.status == 200) {
+                    alert("Success");
+                    location.reload();
+                } else {
+                    alert("Failed");
+                }
+            }
+        });
+    }
+    </script>
+#embed("base/base")

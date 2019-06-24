@@ -1,0 +1,29 @@
+#set("title") { Hello, App Store Connect API Test }
+
+#set("body") {
+<hr/>
+<div>
+<table border="1">
+<tr>
+<td width="100px">#(data.id)</td>
+</tr>
+<tr>
+<td width="100px">#(data.attributes.name)</td>
+</tr>
+<tr>
+<td width="100px">#(data.attributes.sku)</td>
+</tr>
+<tr>
+<td width="100px">#(data.attributes.bundleId)</td>
+</tr>
+<tr>
+<td width="100px">#(data.attributes.primaryLocale)</td>
+</tr>
+<tr>
+<td width="100px">#(data.type)</td>
+</tr>
+</table>
+</div>
+}
+
+#embed("base")

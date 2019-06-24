@@ -1,0 +1,19 @@
+#set("body") {
+    <div class="col-md-10 col-md-offset-1">
+        <table class="table table-bordered">
+        #for(user in data) {
+            <tr>
+            <td width="100px"><a href="/users/#(user.id)">#(user.id)</a></td>
+            <td>#(user.attributes.username)</td>
+            <td>#(user.attributes.firstName)</td>
+            <td>#(user.attributes.lastName)</td>
+            <td>#for(r in user.attributes.roles) { #(r)&nbsp;&nbsp; } </td>
+            <td>#(user.attributes.allAppsVisible)</td>
+            <td>#(user.type)</td>
+            </tr>
+        }
+        </table>
+    </div>
+}
+
+#embed("base/base")
