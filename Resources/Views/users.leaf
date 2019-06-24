@@ -3,7 +3,7 @@
         <table class="table table-bordered">
         #for(user in data) {
             <tr>
-            <td width="100px"><a href="/users/#(user.id)">#(user.id)</a></td>
+            <td><a href="/users/#(user.id)">#(user.id)</a></td>
             <td>#(user.attributes.username)</td>
             <td>#(user.attributes.firstName)</td>
             <td>#(user.attributes.lastName)</td>

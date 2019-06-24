@@ -3,7 +3,7 @@
         <table class="table table-bordered">
         #for(bundleId in data) {
             <tr>
-            <td width="100px"><a href="/bundle_ids/#(bundleId.id)">#(bundleId.id)</a></td>
+            <td><a href="/bundle_ids/#(bundleId.id)">#(bundleId.id)</a></td>
             <td>#(bundleId.attributes.name)</td>
             <td>#(bundleId.attributes.identifier)</td>
             <td>#(bundleId.attributes.platform)</td>

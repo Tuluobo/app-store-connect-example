@@ -17,7 +17,8 @@
         <li class="active"><a href="/">Apps <span class="sr-only">(current)</span></a></li>
         <li><a href="/bundle_ids">Bundle ID</a></li>
         <li><a href="/profiles">Profile</a></li>
-        <li><a href="users">User</a></li>
+        <li><a href="/devices">Device</a></li>
+        <li><a href="/users">User</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->

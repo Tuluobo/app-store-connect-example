@@ -3,7 +3,7 @@
         <table class="table table-bordered">
         #for(app in data) {
             <tr>
-            <td width="100px"><a href="/apps/#(app.id)">#(app.id)</a></td>
+            <td><a href="/apps/#(app.id)">#(app.id)</a></td>
             <td>#(app.attributes.name)</td>
             <td>#(app.attributes.bundleId)</td>
             <td>#(app.attributes.sku)</td>
