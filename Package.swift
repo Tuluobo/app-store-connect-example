@@ -2,9 +2,9 @@
 import PackageDescription
 
 let package = Package(
-    name: "VaporAppStoreConnectApi",
+    name: "Example",
     products: [
-        .library(name: "VaporAppStoreConnectApi", targets: ["App"]),
+        .library(name: "Example", targets: ["App"]),
     ],
     dependencies: [
         // 💧 A server-side Swift web framework.

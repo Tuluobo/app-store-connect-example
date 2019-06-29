@@ -30,5 +30,7 @@ public func configure(_ config: inout Config, _ env: inout Environment, _ servic
         let iss = Environment.get("iss"),
         let keyPath = Environment.get("keyPath") {
         try ASCApiManager.default.startService(iss: iss, kid: kid, keyPath: keyPath)
+    } else {
+        fatalError("kid, iss and keyPath not empty.")
     }
 }
