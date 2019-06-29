@@ -1,0 +1,21 @@
+#set("body") {
+    <div class="col-md-10 col-md-offset-1">
+        <table class="table table-bordered">
+        #for(profile in data) {
+            <tr>
+            <td>#(profile.id)</td>
+            <td>#(profile.attributes.uuid)</td>
+            <td>#(profile.attributes.name)</td>
+            <td>#(profile.attributes.platform)</td>
+            <td>#(profile.attributes.profileType)</td>
+            <td>#(profile.attributes.createdDate)</td>
+            <td>#(profile.attributes.expirationDate)</td>
+            <td>#(profile.type)</td>
+            <td>#(profile.attributes.profileState)</td>
+            </tr>
+        }
+        </table>
+    </div>
+}
+
+#embed("base/base")

@@ -6,4 +6,5 @@ public func routes(_ router: Router) throws {
     try router.register(collection: UserController())
     try router.register(collection: BundleIDController())
     try router.register(collection: DeviceController())
+    try router.register(collection: ProfileViewController())
 }
