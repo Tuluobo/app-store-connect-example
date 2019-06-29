@@ -23,7 +23,7 @@ final class UserController: RouteCollection {
         })
     }
 
-    func getUserInfo(_ req: Request) throws -> Future<UserInfoResponse> {
+    func getUserInfo(_ req: Request) throws -> Future<InfoResponse<User>> {
         let uid = try req.parameters.next(String.self)
         return try userApi.getUserInfo(id: uid, on: req)
     }
