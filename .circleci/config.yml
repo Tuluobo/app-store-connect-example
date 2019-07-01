@@ -1,10 +1,24 @@
 version: 2
 
 jobs:
+  macos:
+    macos:
+      xcode: "10.0"
+    steps:
+      - run: brew install vapor/tap/vapor
+      - checkout
+      - run: swift build
+      - run: swift test
   linux:
     docker:
       - image: swift:5.0
     steps:
+      - run:
+          name: apt-get update
+          command: apt-get update
+      - run:
+          name: apt-get install
+          command: apt-get install -y libmysqlclient-dev libssl-dev
       - checkout
       - run: 
           name: Compile code
@@ -17,6 +31,12 @@ jobs:
     docker:
       - image: swift:5.0
     steps:
+      - run:
+          name: apt-get update
+          command: apt-get update
+      - run:
+          name: apt-get install
+          command: apt-get install -y libmysqlclient-dev libssl-dev
       - checkout
       - run: 
           name: Compile code with optimizations
@@ -26,18 +46,6 @@ workflows:
   version: 2
   tests:
     jobs:
+      - macos
       - linux
       - linux-release
-
-  nightly:
-    triggers:
-      - schedule:
-          cron: "0 0 * * *"
-          filters:
-            branches:
-              only:
-                - master
-    jobs:
-      - linux
-      - linux-release
-      
