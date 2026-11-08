@@ -2,15 +2,6 @@
   "object": {
     "pins": [
       {
-        "package": "ASCApi",
-        "repositoryURL": "https://github.com/Tuluobo/app-store-connect.git",
-        "state": {
-          "branch": "develop",
-          "revision": "e5f3d11d4514c4e3c6a5188a92598a71051a13e7",
-          "version": null
-        }
-      },
-      {
         "package": "Console",
         "repositoryURL": "https://github.com/vapor/console.git",
         "state": {

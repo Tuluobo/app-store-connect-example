@@ -12,8 +12,8 @@ let package = Package(
         // 🍃 An expressive, performant, and extensible templating language built for Swift.
         .package(url: "https://github.com/vapor/leaf.git", from: "3.0.0"),
         
-        // .package(path: "../app-store-connect"),
-        .package(url: "https://github.com/Tuluobo/app-store-connect.git", .branch("develop")),
+         .package(path: "../app-store-connect"),
+//        .package(url: "https://github.com/Tuluobo/app-store-connect.git", .branch("develop")),
     ],
     targets: [
         .target(name: "App", dependencies: ["Vapor", "ASCApi", "Leaf"]),
